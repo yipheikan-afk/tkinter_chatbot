@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label_photo">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>81</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="autoFillBackground">
+     <bool>true</bool>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_name">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>20</y>
+      <width>311</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_role">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>40</y>
+      <width>271</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
+   </widget>
+   <widget class="QStackedWidget" name="mainwidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>110</y>
+      <width>761</width>
+      <height>391</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>4</number>
+    </property>
+    <widget class="QWidget" name="admin">
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>771</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="users">
+       <attribute name="title">
+        <string>Пользователи</string>
+       </attribute>
+       <widget class="QTableView" name="userstable">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>751</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderStretchLastSection">
+         <bool>false</bool>
+        </attribute>
+       </widget>
+       <widget class="QPushButton" name="resetbutton">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>320</y>
+          <width>111</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Сброс пароля</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="blockbutton">
+        <property name="geometry">
+         <rect>
+          <x>140</x>
+          <y>320</y>
+          <width>171</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Блокировка/Разблокировка</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="logs">
+       <attribute name="title">
+        <string>Логирование</string>
+       </attribute>
+       <widget class="QTableView" name="logtable">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>751</width>
+          <height>301</height>
+         </rect>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="laborant">
+     <widget class="QTabWidget" name="myorderstable_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>771</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="acceptservice">
+       <attribute name="title">
+        <string>Принять биометриал</string>
+       </attribute>
+       <widget class="QTableView" name="order_servicestable">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>751</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderStretchLastSection">
+         <bool>false</bool>
+        </attribute>
+       </widget>
+       <widget class="QPushButton" name="resetbutton_4">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>320</y>
+          <width>111</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Принять</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="acceptedservice">
+       <attribute name="title">
+        <string>Принятый биометриал</string>
+       </attribute>
+       <widget class="QTableView" name="logtable_4">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>751</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+       </widget>
+       <widget class="QPushButton" name="resetbutton_5">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>320</y>
+          <width>141</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Сформировать отчет</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="laborant_researcher">
+     <widget class="QTabWidget" name="laborant_researcher_table">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>771</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="analizator">
+       <attribute name="title">
+        <string>Анализатор</string>
+       </attribute>
+       <widget class="QTableView" name="order_servicestable_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>751</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderStretchLastSection">
+         <bool>false</bool>
+        </attribute>
+       </widget>
+       <widget class="QPushButton" name="analizatorbutton">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>320</y>
+          <width>201</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Анализировать биоматериал</string>
+        </property>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="patient">
+     <widget class="QTabWidget" name="myorderstable">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>771</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="users_2">
+       <attribute name="title">
+        <string>Доступные услуги</string>
+       </attribute>
+       <widget class="QTableView" name="serviceavailabletable">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>751</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+        <attribute name="verticalHeaderStretchLastSection">
+         <bool>false</bool>
+        </attribute>
+       </widget>
+       <widget class="QPushButton" name="createorderbutton">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>320</y>
+          <width>111</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Создать заказ</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="logs_2">
+       <attribute name="title">
+        <string>Мои заказы</string>
+       </attribute>
+       <widget class="QTableView" name="myorders">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>751</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="accountant">
+     <widget class="QTabWidget" name="invoices">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>751</width>
+        <height>391</height>
+       </rect>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_3">
+       <attribute name="title">
+        <string>Выставленные счета</string>
+       </attribute>
+       <widget class="QTableView" name="logtable_2">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>751</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+       </widget>
+       <widget class="QPushButton" name="invoicebutton">
+        <property name="geometry">
+         <rect>
+          <x>20</x>
+          <y>330</y>
+          <width>131</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Выставить счета</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="reportbutton">
+        <property name="geometry">
+         <rect>
+          <x>160</x>
+          <y>330</y>
+          <width>131</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Сформировать отчет</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Управление услугами</string>
+       </attribute>
+       <widget class="QTableView" name="services">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>751</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+       </widget>
+       <widget class="QPushButton" name="changeservice">
+        <property name="geometry">
+         <rect>
+          <x>150</x>
+          <y>330</y>
+          <width>131</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Изменить услугу</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="addservice">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>330</y>
+          <width>131</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Добавить услугу</string>
+        </property>
+       </widget>
+       <widget class="QPushButton" name="archiveservice">
+        <property name="geometry">
+         <rect>
+          <x>290</x>
+          <y>330</y>
+          <width>131</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Архивировать услугу</string>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QWidget" name="tab_4">
+       <attribute name="title">
+        <string>Пользователи(последний вход)</string>
+       </attribute>
+       <widget class="QTableView" name="userslastlogin">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>751</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <attribute name="horizontalHeaderStretchLastSection">
+         <bool>true</bool>
+        </attribute>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="exitbutton">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>520</y>
+      <width>75</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Выход</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_name_2">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>20</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>ФИО:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_name_3">
+    <property name="geometry">
+     <rect>
+      <x>140</x>
+      <y>40</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Роль:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_timer">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>20</y>
+      <width>201</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

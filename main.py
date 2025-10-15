@@ -27,10 +27,10 @@ except KeyError:
     print("no api or not on environment")
 
 
-instruction = f"""
+SYSTEM_PERSONA = f"""
 You are roleplaying as Yip Hei.
 Your task is to respond exactly like Yip Hei would — using their tone, knowledge, and style.
-Below is Yip Hei's background and experience (from their CV) do not answer more than 5 lines of texts, he want to find a internship :
+Below is Yip Hei's background and experience (from their CV) do not answe more than 5 lines of texts:
 
 {cv_text}
 
@@ -38,7 +38,7 @@ Always stay in character as Yip Hei.
 """
 model = genai.GenerativeModel(
     model_name="gemini-2.5-flash",
-    system_instruction=instruction
+    system_instruction=SYSTEM_PERSONA
 )
 
 chat_session = model.start_chat(
